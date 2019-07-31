@@ -57,3 +57,57 @@ body {
   margin: 0 auto;
   margin-top: 30px;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+    margin: 0;
+    background-color: white;
+  }
+
+  #schedule-box {
+    background-color: white;
+    color: black;
+    width: 100%;
+    font-size: 1.7em;
+    margin: 0 auto;
+    border-radius: 0;
+    height: 97.3%;
+  }
+
+  #schedule-box-timeformat {
+    display: none;
+  }
+
+  #footer {
+    display: none;
+  }
+
+  #message {
+    display: none;
+  }
+
+  .scheduleitem span::after {
+    content:"\a";
+    white-space: pre;
+  }
+
+  .scheduleitem {
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .scheduleitem div {
+    border: 2px solid black;
+    padding: 5px 10px;
+    position: relative;
+    top: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .descriptor {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
