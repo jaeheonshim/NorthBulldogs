@@ -61,7 +61,12 @@ function updateTimeElapsed(){
 		totalSeconds %= 3600;
 		minutes = Math.floor(totalSeconds / 60);
 		seconds = Math.floor(totalSeconds % 60);
-		document.getElementById("time-elapsed").innerHTML = hours + ":" + minTwoDigits(minutes) + ":" + minTwoDigits(seconds);
+		if(Number.isNaN(hours)) {
+			document.getElementById("time-elapsed").innerHTML = "--:--:--";
+		}
+		else {
+			document.getElementById("time-elapsed").innerHTML = hours + ":" + minTwoDigits(minutes) + ":" + minTwoDigits(seconds);
+		}
 	}
 }
 }
@@ -76,10 +81,12 @@ function updateTimeLeft() {
 		totalSecondsLeft %= 3600;
 		minutesleft = Math.floor(totalSecondsLeft / 60);
 		secondsleft = Math.floor(totalSecondsLeft % 60);
-		if(hoursleft.isNaN()) {
+		if(Number.isNaN(hoursleft)) {
 			document.getElementById("time-left").innerHTML = "--:--:--";
 		}
-		document.getElementById("time-left").innerHTML = hoursleft + ":" + minTwoDigits(minutesleft) + ":" + minTwoDigits(secondsleft);
+		else {
+			document.getElementById("time-left").innerHTML = hoursleft + ":" + minTwoDigits(minutesleft) + ":" + minTwoDigits(secondsleft);
+		}
 	}
 }
 
@@ -89,8 +96,13 @@ function setTimeLeftInPeriod() {
 	totalSecondsLeft %= 3600;
 	minutesleft = Math.floor(totalSecondsLeft / 60);
 	secondsleft = Math.floor(totalSecondsLeft % 60);
-	document.getElementById("current-period-left").innerHTML = hoursleft + ":" + minTwoDigits(minutesleft) + ":" + minTwoDigits(secondsleft);
-	document.title = "Left in period:" + hoursleft + ":" + minTwoDigits(minutesleft) + ":" + minTwoDigits(secondsleft);
+	if(Number.isNaN(hoursleft)) {
+		document.getElementById("current-period-left").innerHTML = "--:--:--";
+	}
+	else {
+		document.getElementById("current-period-left").innerHTML = hoursleft + ":" + minTwoDigits(minutesleft) + ":" + minTwoDigits(secondsleft);
+		document.title = "Left in period:" + hoursleft + ":" + minTwoDigits(minutesleft) + ":" + minTwoDigits(secondsleft);
+	}
 }
 
 function updateSubscribers() {
