@@ -75,6 +75,10 @@ body {
     height: 97.3%;
   }
 
+  #schedule-box-heading {
+    padding: 10px;
+  }
+
   #schedule-box-timeformat {
     display: none;
   }
