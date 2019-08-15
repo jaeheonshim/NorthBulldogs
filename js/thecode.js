@@ -134,8 +134,14 @@ function getPeriod() {
 		if (absoluteTime > parseTimeToSecs("11:06") && absoluteTime < parseTimeToSecs("11:12")) {
 			document.getElementById("current-class").innerHTML = "Passing Period (To Period 5)";
 		}
-		if (absoluteTime > parseTimeToSecs("11:12") && absoluteTime < parseTimeToSecs("12:42")) {
-			document.getElementById("current-class").innerHTML = "Period 5";
+		if (absoluteTime > parseTimeToSecs("11:12") && absoluteTime < parseTimeToSecs("11:54")) {
+			document.getElementById("current-class").innerHTML = "Period 5 (Lunch A)";
+		}
+		if (absoluteTime > parseTimeToSecs("11:54") && absoluteTime < parseTimeToSecs("12:00")) {
+			document.getElementById("current-class").innerHTML = "Passing Period (To P5 Lunch C)";
+		}
+		if (absoluteTime > parseTimeToSecs("12:00") && absoluteTime < parseTimeToSecs("12:42")) {
+			document.getElementById("current-class").innerHTML = "Period 5 (Lunch C)";
 		}
 		if (absoluteTime > parseTimeToSecs("12:42") && absoluteTime < parseTimeToSecs("12:48")) {
 			document.getElementById("current-class").innerHTML = "Passing Period (To Period 6)";
@@ -154,59 +160,6 @@ function getPeriod() {
 		}
 		if (absoluteTime > parseTimeToSecs("14:30") && absoluteTime < parseTimeToSecs("15:15")) {
 			document.getElementById("current-class").innerHTML = "Period 8";
-		}
-	}
-	else if(twohour == true){
-		if (secondselapsed < 2100) {
-			document.getElementById("current-class").innerHTML = "Period 1";
-		}
-		if (secondselapsed > 2100 && secondselapsed < 2400) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To Period 2)";
-		}
-		if (secondselapsed > 2400 && secondselapsed < 4200) {
-			document.getElementById("current-class").innerHTML = "Period 2";
-		}
-		if (secondselapsed > 4200 && secondselapsed < 4500) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To Period 3)";
-		}
-		if (secondselapsed > 4500 && secondselapsed < 6300) {
-			document.getElementById("current-class").innerHTML = "Period 3";
-		}
-		if (secondselapsed > 6300 && secondselapsed < 6600) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To Period 5)";
-		}
-		if (secondselapsed > 6600 && secondselapsed < 8400) {
-			document.getElementById("current-class").innerHTML = "Period 5 (Lunch)";
-		}
-		if (secondselapsed > 8400 && secondselapsed < 8700) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To Period 6)";
-		}
-		if (secondselapsed > 8700 && secondselapsed < 10500) {
-			document.getElementById("current-class").innerHTML = "Period 6";
-		}
-		if (secondselapsed > 10500 && secondselapsed < 10800) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To Period 7)";
-		}
-		if (secondselapsed > 10800 && secondselapsed < 12600) {
-			document.getElementById("current-class").innerHTML = "Period 7";
-		}
-		if (secondselapsed > 12600 && secondselapsed < 12900) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To Period 4)";
-		}
-		if (secondselapsed > 12900 && secondselapsed < 14700) {
-			document.getElementById("current-class").innerHTML = "Period 4";
-		}
-		if (secondselapsed > 14700 && secondselapsed < 15000) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To Period 8)";
-		}
-		if (secondselapsed > 15000 && secondselapsed < 16800) {
-			document.getElementById("current-class").innerHTML = "Period 8 (Exploratory)";
-		}
-		if (secondselapsed > 16800 && secondselapsed < 17100) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To Period 9)";
-		}
-		if (secondselapsed > 17100 && secondselapsed < 18900) {
-			document.getElementById("current-class").innerHTML = "Period 9 (Exploratory)";
 		}
 	}
 	else {
