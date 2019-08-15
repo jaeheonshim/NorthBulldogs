@@ -190,6 +190,7 @@ function getTimeLeftInPeriod() {
 		if (absoluteTime > parseTimeToSecs("10:18") && absoluteTime < parseTimeToSecs("11:06")) {
 			return parseTimeToSecs("11:06") - absoluteTime;
 		}
+		
 		if (absoluteTime > parseTimeToSecs("11:06") && absoluteTime < parseTimeToSecs("11:12")) {
 			return parseTimeToSecs("11:12") - absoluteTime;
 		}
