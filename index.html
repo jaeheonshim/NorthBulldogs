@@ -1,92 +1,51 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-	<link rel="shortcut icon" type="image/png" href="/icon.png"/>
-	<note: school day is 7 hours 15 minutes>
-	<script src="js/thecode.js"></script>
-	<script src="js/frontendupdates.js"></script>
-	<title>
-		northbulldogs.com - Live time clock
-	</title>
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NorthBulldogs</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body onload="main();">
-	<div class="main" id="main">
-		<div id="schedule-box">
-			<span id="schedule-box-heading">North High School Live Schedule</span>
-			<div id="schedule-box-contents">
-				<div id="schedule-box-timeformat">
-					Preferred time format: 
-					<select id="preferredtime">
-						<option value="12">12 hour</option>
-						<option value="24">24 hour</option>
-					</select>
-				</div>
-				<div class="schedule-box-text">
-					<div class="scheduleitem">
-						<span class="descriptor">
-							Current Time:
-						</span>
-						<div id="current-time" style="display: inline">
-							--:--:--
-						</div>
-					</div>
-					<div class="scheduleitem">
-						<span class="descriptor">
-							Elapsed in school day:
-						</span>
-						<div id="time-elapsed" style="display: inline">
-							--:--:--
-						</div>
-					</div>
-					<div class="scheduleitem">
-						<span class="descriptor">
-							Left in school day:
-						</span>
-						<div id="time-left" style="display: inline">
-							--:--:--
-						</div>
-					</div>
-					<div class="scheduleitem">
-						<span class="descriptor">
-							Period:
-						</span>
-						<div id="current-class" style="display: inline">
-							--:--:--
-						</div>
-					</div>
-					<div class="scheduleitem">
-						<span class="descriptor">
-							Left in class period:
-						</span>
-						<div id="current-period-left" style="display: inline">
-							--:--:--
-						</div>
-					</div>
-					<div class="scheduleitem">
-						<span class="descriptor">
-							School Year Ends In:
-						</span>
-						<div id="school-time-left" style="display: inline">
-							school-time-left
-						</div>
-					</div>
-					<div id="message" align="middle" style="border: 10px solid green; width: 50%; margin: auto">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="footer">
-			NorthBulldogs.com <b>v1.0.0</b> (North High School Live Schedule) By Jaeheon Shim. All code is open source and can be used for any purpose
-			as long as license terms in the repository are followed. This website uses cookies to provide a better experience 
-			for you. Cookies are used to save user data so that users don't have to enter it in every time. If you do not
-			consent to the use of cookies, you can either disable them in browser settings or not use the website. Jaeheon Shim
-			is not responsible for errors in this service.
-		</div>
-	</body>
-	</html>
-	
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="padding-bottom: 16px;">
+            <div class="container"><a class="navbar-brand text-truncate" href="#">NorthBulldogs.com - Useful online applications for school by Jaeheon Shim<br></a></div>
+        </nav>
+    </div>
+    <div class="highlight-phone">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="intro">
+                        <h2>Live Schedule Timer</h2>
+                        <p>A live clock that counts down from the beginning of the school day, to the second it ends. This clock also tracks which period it currently is, how much time is left in that period, and how much time is left in your passing period.</p>
+                        <a
+                            class="btn btn-primary" role="button" href="timer/index.html">Open</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="d-none d-md-block iphone-mockup"><img class="device" src="assets/img/iphone.svg">
+                        <div class="screen" style="background-image: url(&quot;assets/img/Screenshot_20190819-090814~2.png&quot;);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <p class="text-center" style="padding-right: 20%;padding-bottom: 10px;margin-right: auto;margin-left: auto;padding-left: 20%;">While this website itself does not collect data from its users, the websites that this website provides links to could potentially collect user data. Please refer to the Privacy Policy on each application to understand how user data is collected
+                and processed.</p>
+            <p class="copyright">Jaeheon Shim © 2019</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
