@@ -4,8 +4,7 @@ By Jaeheon Shim
 Javascript
 */
 
-function SecDiff(CurrentDate)
-{
+function SecDiff(CurrentDate) {
 	var TYear=CurrentDate.getFullYear();
         var TDay=new Date("2020-05-28T15:05:00-04:00");
         TDay.getFullYear(TYear);
@@ -134,13 +133,10 @@ function getPeriod() {
 		if (absoluteTime > parseTimeToSecs("11:06") && absoluteTime < parseTimeToSecs("11:12")) {
 			document.getElementById("current-class").innerHTML = "Passing Period (To Period 5)";
 		}
-		if (absoluteTime > parseTimeToSecs("11:12") && absoluteTime < parseTimeToSecs("11:54")) {
+		if (absoluteTime > parseTimeToSecs("11:12") && absoluteTime < parseTimeToSecs("11:57")) {
 			document.getElementById("current-class").innerHTML = "Period 5 (Lunch A)";
 		}
-		if (absoluteTime > parseTimeToSecs("11:54") && absoluteTime < parseTimeToSecs("12:00")) {
-			document.getElementById("current-class").innerHTML = "Passing Period (To P5 Lunch C)";
-		}
-		if (absoluteTime > parseTimeToSecs("12:00") && absoluteTime < parseTimeToSecs("12:42")) {
+		if (absoluteTime > parseTimeToSecs("11:57") && absoluteTime < parseTimeToSecs("12:42")) {
 			document.getElementById("current-class").innerHTML = "Period 5 (Lunch C)";
 		}
 		if (absoluteTime > parseTimeToSecs("12:42") && absoluteTime < parseTimeToSecs("12:48")) {
@@ -170,32 +166,35 @@ function getPeriod() {
 function getTimeLeftInPeriod() {
 	if(twohour == false) {
 		if (absoluteTime < parseTimeToSecs("8:30") && absoluteTime > parseTimeToSecs("7:45")) {
-			return parseTimeToSecs("7:45") - absoluteTime;
+			return parseTimeToSecs("8:30") - absoluteTime; //period 1
 		}
 		if (absoluteTime > parseTimeToSecs("8:30") && absoluteTime < parseTimeToSecs("8:36")) {
-			return parseTimeToSecs("8:36") - absoluteTime;
+			return parseTimeToSecs("8:36") - absoluteTime; //period 1 pp
 		}
 		if (absoluteTime > parseTimeToSecs("8:36") && absoluteTime < parseTimeToSecs("9:21")) {
-			return parseTimeToSecs("9:21") - absoluteTime;
+			return parseTimeToSecs("9:21") - absoluteTime; //period 2
 		}
 		if (absoluteTime > parseTimeToSecs("9:21") && absoluteTime < parseTimeToSecs("9:27")) {
-			return parseTimeToSecs("9:27") - absoluteTime;
+			return parseTimeToSecs("9:27") - absoluteTime; //period 2 pp
 		}
 		if (absoluteTime > parseTimeToSecs("9:27") && absoluteTime < parseTimeToSecs("10:12")) {
-			return parseTimeToSecs("10:12") - absoluteTime;
+			return parseTimeToSecs("10:12") - absoluteTime; //period 3
 		}
 		if (absoluteTime > parseTimeToSecs("10:12") && absoluteTime < parseTimeToSecs("10:18")) {
-			return parseTimeToSecs("10:18") - absoluteTime;
+			return parseTimeToSecs("10:18") - absoluteTime; //period 3 pp
 		}
 		if (absoluteTime > parseTimeToSecs("10:18") && absoluteTime < parseTimeToSecs("11:06")) {
-			return parseTimeToSecs("11:06") - absoluteTime;
+			return parseTimeToSecs("11:06") - absoluteTime; //period 4
 		}
 		
 		if (absoluteTime > parseTimeToSecs("11:06") && absoluteTime < parseTimeToSecs("11:12")) {
-			return parseTimeToSecs("11:12") - absoluteTime;
+			return parseTimeToSecs("11:12") - absoluteTime; //period 4 pp
 		}
-		if (absoluteTime > parseTimeToSecs("11:12") && absoluteTime < parseTimeToSecs("12:42")) {
-			return parseTimeToSecs("12:42") - absoluteTime;
+		if (absoluteTime > parseTimeToSecs("11:12") && absoluteTime < parseTimeToSecs("11:57")) {
+			return parseTimeToSecs("11:57") - absoluteTime; //period 5a
+		}
+		if (absoluteTime > parseTimeToSecs("11:57") && absoluteTime < parseTimeToSecs("12:42")) {
+			return parseTimeToSecs("12:42") - absoluteTime; //period 5c
 		}
 		if (absoluteTime > parseTimeToSecs("12:42") && absoluteTime < parseTimeToSecs("12:48")) {
 			return parseTimeToSecs("12:48") - absoluteTime;
